@@ -1,1 +1,5 @@
+title: Personal page
+description: You know where to find me.
+show_downloads: false
+google_analytics:
 theme: jekyll-theme-slate
