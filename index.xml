@@ -17,8 +17,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tc2.dev/about/</guid>
-      <description>Contact To contact me
- E-mail info@tc2.dev LinkedIn https://www.linkedin.com/in/jos-polfliet/ Twitter https://twitter.com/JosPolfliet  Topics I like  Machine Learning with a special interest in Natural Language Processing Sustainability. I am striving to living carbon neutral in 2020 and beyond. I accomplish that by trying to reducing my carbon footprint by mostly eating plant-based food and living close to work (10 min bike ride). The inevitable carbon I do produce, I offset. Reading.</description>
+      <description>whoami Hello 👋. My name is Jos Polfliet, and the reason I get up every day is to make the world more automated, more efficient and evidence-based. My specialty is in Machine and Deep Learning, with a special interest in Natural Language Processing.
+My passion is in applying Artificial Intelligence. That means I am committed and focussed on doing useful things with A.I.
+In the past and present, I had the opportunity so successfully apply that at</description>
     </item>
     
     <item>
@@ -29,6 +30,16 @@
       <guid>https://tc2.dev/blog/readme/</guid>
       <description>Lorem ipsum
 Some content</description>
+    </item>
+    
+    <item>
+      <title>Why?</title>
+      <link>https://tc2.dev/why/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tc2.dev/why/</guid>
+      <description>Why I work in A.I. I believe that algorithms can make better decisions than humans. I have an undying, relentless optimism that even the hardest societal problems can be aided by applying technology and Artificial Intelligence. I&amp;rsquo;m a fanatic, even cult-like techno-optimist.
+I believe A.I. beats humans at many, many tasks and on many different criteria A well developed algorithm is more fair than any person, as we can explicitly control for bias instead of being driven by unconscious bias.</description>
     </item>
     
   </channel>
