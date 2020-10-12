@@ -6,11 +6,7 @@
     <description>Recent content in Blogs on Tau Ceti Consulting</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© {year}</copyright>
-    
-	<atom:link href="https://tc2.dev/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>© {year}</copyright><atom:link href="https://tc2.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Title of the post</title>
       <link>https://tc2.dev/blog/readme/</link>
