@@ -7,7 +7,12 @@
   </url>
   
   <url>
-    <loc>https://tc2.dev/content/</loc>
+    <loc>https://tc2.dev/advice-learning-ml/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tc2.dev/carbon-neutral/</loc>
     <priority>0</priority>
   </url>
   

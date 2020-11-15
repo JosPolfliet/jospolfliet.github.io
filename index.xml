@@ -9,11 +9,20 @@
     <copyright>© {year}</copyright><atom:link href="https://tc2.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://tc2.dev/content/</link>
+      <link>https://tc2.dev/advice-learning-ml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tc2.dev/content/</guid>
+      <guid>https://tc2.dev/advice-learning-ml/</guid>
       <description>Advice for people wanting to learn ML First things first: consider alternatives ML is super cool and hip. But at the moment there is an over supply of Junior Machine Learning Engineers. There is however a huge shortage of Data Engineers and Python Software Developers. If you care more about your career path, opportunities and salary, you should NOT choose to work in ML. If you care about data and statistics, you should choose ML.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tc2.dev/carbon-neutral/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tc2.dev/carbon-neutral/</guid>
+      <description>Zero carbon humans I like our planet. A lot. It is where I spend the vast majority of my time. It&amp;rsquo;s the place where I see my friends and family. I enjoy its seasons with the wisdom of autumn, the immaculateness of winter, the possibilities of spring and the completeness of summer. I long for the dopamine-free calmness of being in nature to decouple from the stresses of daily life.</description>
     </item>
     
     <item>
