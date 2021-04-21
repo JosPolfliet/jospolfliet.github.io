@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title> | Personal website of Jos Polfliet | TC2</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:site" content="https://twitter.com/JosPolfliet" />
+  <meta name="twitter:creator" content="https://twitter.com/JosPolfliet" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.2cb93c91050d1853bf971cc31e00122edd6e0f405aa1de3b7f8ef67ea3b5a79a.css" integrity="sha256-LLk8kQUNGFO/lxzDHgASLt1uD0Baod47f472fqO1p5o="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.5fab7f00dfa760a3c16ede01612efac5c1c440a6e48be73883d74860530b06a1.css" integrity="sha256-X6t/AN&#43;nYKPBbt4BYS76xcHEQKbki&#43;c4g9dIYFMLBqE="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "https:\/\/tc2.dev\/zero-to-one-ml-architecture\/",
+      "name": "",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "description": ""
+    }
+  
+  </script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-BHL3JLQ4PB', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">welcome</a>
+      </li>
+    
+      <li>
+        <a  href="/why">mission</a>
+      </li>
+    
+      <li>
+        <a  href="/zero-to-one-ml-architecture"></a>
+      </li>
+    
+      <li>
+        <a  href="/advice-learning-ml">ml advice</a>
+      </li>
+    
+      <li>
+        <a  href="/zero-carbon-human">zero carbon</a>
+      </li>
+    
+      <li>
+        <a  href="/about">bio</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title"></h1>
+            
+          </header>
+          <article class="post__content">
+              
+<h1 id="ml-architecture-from-zero-to-one">ML Architecture from zero to one</h1>
+<p>If you would follow all best practices on the internet with regards to coding and technical architecture, start-ups would take multiple years and huge budgets to get an MVP, while you only have limited time, money and people. I created this list out of experience on what to focus on in which stage of building a new company, and which best practices you can safely ignore at different stages. Advice like this is always opinionated and you should pick and choose what actually applies to you or not. For example if you are working on a medical device, you should invest in security faster. Or if your customers need to be able to train their own models, you need to invest in training pipelines and serving architecture sooner.</p>
+<p>To create a mature product, let&rsquo;s say you need about one thousand development days. With 5 full time developers, that&rsquo;s about a year&rsquo;s work. If you are a start-up, you don&rsquo;t have that time (and maybe not even those developers) so you need to <strong>ruthlessly prioritize.</strong></p>
+<p>Here is some advice</p>
+<h3 id="general-advice">General advice<a class="anchor" href="#general-advice">#</a></h3>
+<ul>
+<li>Learn, but then subsequently ignore &ldquo;best practices&rdquo; until you encounter the problem that would be solved. You do not need CI/CD, auto-scaling, Kubeflow training pipelines, prediction monitoring, automated retraining and multi-armed bandit A/B testing when you are working on your POC. Only solve the problems you actually have. Don&rsquo;t solve problems other people had and subsequently made a best practice, unless you have the same problem.</li>
+<li>Development speed matters. Do everything you can to optimize for development speed and make your own internal workflow as streamlined and fast as possible in the beginning. Most scalability, advanced security and code quality issues are perfectly fixable in the future. Make daily improvements to your internal workflow by automating things. I rather spend 2 hours automating something then doing the same 2-min task manually 10 times. That math doesn&rsquo;t seem to work out at first glance, but it does in the long run: automation compounds over time. That leads to exponential differences and fat moats.</li>
+<li>Write decoupled and easily extendable code. If all goes well, you will be working in this code base for the next 5 years, so try to structure it well from the beginning. You will - or should - never rewrite from scratch.</li>
+<li>Most decisions can easily be reverted and should be taken quickly. Except one type: adopting a new architecture/library/framework/database. When you choose to adopt Neo4j instead of Postgres, it&rsquo;s a choice that can take months of development work to properly integrate and fine tune. If that turned out to be the wrong choice, you are looking at a huge refactor, frustration and wasted time. Take extra care and time to think and test extensively before adopting new libraries, frameworks or technology. Don&rsquo;t rush these decisions, because they are very expensive to fix later. Make sure you check decisions like these with your technical advisors, if you are in doubt.</li>
+<li>Don&rsquo;t waste time. If you feel like you are losing time on something: fix it.</li>
+</ul>
+<p>With those general principles out of the way, here&rsquo;s what I found is a typical roadmap that I have applied when starting, growing and leading the ML teams for Chatlayer, Faktion and Metamaze.</p>
+<h3 id="poc--seed-stage">POC / Seed stage<a class="anchor" href="#poc--seed-stage">#</a></h3>
+<p>In this stage, the most important aspect is proving your technology can work. The only thing that matters is you being able to give convincing demonstrations to potential early-adopter clients and investors.</p>
+<p>In this stage, you should mostly do whatever gives you the highest development speed. That means developing and testing everything locally as much as possible. Focus is on building good habits and setting a long term foundation.</p>
+<h4 id="do">DO</h4>
+<ul>
+<li>Version and track all your code in git.</li>
+<li>Log your experiments: code used, architecture, data version, training (hyper) parameters and results.
+<ul>
+<li>automatically in a experiment tracking framework like Weights and Biases (super easy and generous free tier) and MLFlow (requires quite some setup and configuration but open source).</li>
+<li>manually in Confluence/Notion/GitHub/&hellip; which requires discipline</li>
+</ul>
+</li>
+<li>Write and run functional tests for the most crucial parts of your code base. You want your demo&rsquo;s to go smoothly, and never have last minute fixes break something else unexpectedly.
+<ul>
+<li>No tests at all is bad and will hinder you in the future and cause frustration when things inevitably break.</li>
+<li>Wanting &gt;90% test coverage isn&rsquo;t recommended either since it will slow you down too much: your code base changes dramatically from day to day since it is in flux all the time.</li>
+</ul>
+</li>
+<li>Add git pre-commit hooks for formatting, linting and type checking. Type annotate all your code (trust me on this one: you&rsquo;ll thank me later). Optionally add more static code analysis like deepsource.io or sonarqube. Get into the habit of writing good code from the start.</li>
+</ul>
+<h4 id="recommended">RECOMMENDED</h4>
+<ul>
+<li>If the data size allows, run your trainings locally on your laptop / desktop with GPU.
+<ul>
+<li>If you can avoid having to set-up cloud architecture it will save you a lot of time.</li>
+<li>If you can&rsquo;t, try using something simple like Azure Notebooks, Google Colab or AWS Sagemaker. Or - if you have funky dependencies - rent a VM with GPU&rsquo;s, download your data, checkout your code and train. Keep it simple.</li>
+</ul>
+</li>
+<li>Work in a decent IDE like PyCharm or Visual Studio Code.</li>
+<li>Run your predictions in a local Docker container. Manually build that docker container. This is fast enough for quick experiments while protecting you from dependency hell.</li>
+<li>If you have a back-end/front-end to show, it&rsquo;s okay to run that locally for now. You can fake a real domain name by adding e.g. <code>app.myunicorn.com 127.0.0.1</code> to your <code>/etc/hosts</code> file.</li>
+<li>Get used to working with issue tracking in JIRA/Github</li>
+<li>Only write some in-code documentation for tricky functions.</li>
+<li>Starting from boilerplate empty repo&rsquo;s like <a href="https://github.com/hagopj13/node-express-boilerplate">https://github.com/hagopj13/node-express-boilerplate</a> or <a href="https://github.com/pydanny/cookiecutter-django">https://github.com/pydanny/cookiecutter-django</a> can help with some stuff you&rsquo;d lose time with later.</li>
+</ul>
+<h3 id="mvp--series-a-stage">MVP / Series A stage<a class="anchor" href="#mvp--series-a-stage">#</a></h3>
+<p>At this stage, there should be a running, bug-free version of your app working at least 95% of the time: some early adopters, your sales people regularly give demonstrations, &hellip; That means you need to deploy your app in the cloud somewhere and keep it kind-of stable.
+Your customers will forgive you some downtime but not as much as you think, so better keep it stable. You don&rsquo;t need rolling deploys yet and can typically get away with just announcing a deploy and testing window for large releases.
+You are building the foundation of your code base for the next ten years are so, so you need to invest time into adopting good coding habits.</p>
+<h4 id="do-1">DO</h4>
+<ul>
+<li>Create a production environment running on Kubernetes.</li>
+<li>Basic security like whitelisting API&rsquo;s and simple password protection for front-end. Turn on production flags, disable introspection, turn on database IP whitelisting, &hellip;</li>
+<li>Add automatic back-ups for your most important client data.</li>
+<li>Create user facing documentation.</li>
+<li>If your platform needs scaling at this stage, work on being able to manually scale the most important components. Running multiple replica&rsquo;s can often do wonders, and the cloud cost of just overdimensioning your cluster will likely be way less than investing time in fine-tuning auto-scaling.</li>
+<li>Adopt git flow methodology or a variant to track releases and versions.</li>
+<li>Track and improve your test coverage.</li>
+</ul>
+<h4 id="recommended-1">RECOMMENDED</h4>
+<ul>
+<li>Run your predictions in a Docker container that you push manually to the registry and then deploy manually on a bare VM, simple container orchestration service or simple Kubernetes cluster. You can deploy new version to Kubernetes manually with helm.</li>
+<li>Add CI/CD to your back-end, front-end and prediction architecture: automatically build and test new builds for code pushes for front-end and back-end. Invest in making deploys easy and reversible, but not necessarily automatic.</li>
+<li>Manually build and deploy models by just updating the reference to your trained model in the predict code. Store your trained model in git-lfs or on blob storage (but NOT just in git)</li>
+<li>Add Sentry or a similar automated error reporting tool so you get alerts when things go wrong.</li>
+<li>Need logs/monitoring? Just using <code>kubectl get logs</code> and <code>kubectl top</code> should be fine for now. Check out <code>fubectl</code> and Lens too for increased efficiency.</li>
+<li>Manually back-up less important data from time to time</li>
+<li>When new developers start, work on documentation for how to run, debug and test code. Add high-level architecture overview diagrams. As much as possible instead of explaining directly to people, update the documentation first.</li>
+</ul>
+<h3 id="product-market-fit--series-b-stage">Product-market fit / Series B stage<a class="anchor" href="#product-market-fit--series-b-stage">#</a></h3>
+<p>Congrats to making it to this stage! You will now have early adopters and customers that depend on the platform so you need to become way more mature. You might have an SLA to guarantee uptime.</p>
+<h4 id="do-2">DO</h4>
+<ul>
+<li>Add external and automatic health monitoring for your platform.</li>
+<li>Improve logging, monitoring and tracing for all technical components. Create real-time dashboards to monitor load and health of your systems</li>
+<li>Add <em><strong>and test</strong></em> backup and restore policies.</li>
+<li>Add, test and finetune the ability to automatically scale to increased load. Solve bottlenecks and plan for the future.</li>
+<li>Invest in decent security by fine-tuning RBAC / SSO to your internal systems.</li>
+<li>Add dev and staging environments so that you can test all components working together easily, test architecture changes, &hellip;</li>
+<li>Add bug tracking and reporting capabilities for your customers.</li>
+<li>Add rolling deploys with blue/green deployments. While releasing new changes, the availability of the platform should not be impacted.</li>
+<li>Score a 12 on <a href="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/">Joel&rsquo;s 12 steps to better code</a></li>
+</ul>
+<h4 id="recommended-2">RECOMMENDED</h4>
+<ul>
+<li>Add monitoring for prediction quality and data drift</li>
+<li>Adopt a good serving framework that solves your needs</li>
+<li>Adopt a training pipeline framework like Kubeflow. Kubeflow is hard to get used too and hard to set up correctly and kinda-hard to secure, but once it&rsquo;s there, it is a powerful collaboration and productivity tool for ML Engineers.</li>
+<li>Add decent and automatic accuracy testing. Create specific and separate test sets for data that had bad predictions in the past. E.g. bad scans, or low lighting videos, &hellip; Add these to your evaluation pipeline and automatically report them per test set so that you know improvements to the model won&rsquo;t negatively impact certain subsets.</li>
+<li>Use static code analysis to find hidden bugs and monitor code quality.</li>
+</ul>
+<h3 id="series-b-and-beyond">Series B and beyond<a class="anchor" href="#series-b-and-beyond">#</a></h3>
+<p>By then, you have an established and polished product. You have talented people working for you and working on scaling the company, long term product roadmaps and maturing your code base.</p>
+<p>If you have made it this far, you managed to have a successful strategy, decent development process and a product that provides value. You - and your team - know where your architectural issues are. It will never be perfect. But it will work.</p>
+<h2 id="read-more">Read more<a class="anchor" href="#read-more">#</a></h2>
+<ul>
+<li><a href="https://www.goodreads.com/book/show/18043011-clean-architecture">Clean Architecture</a> by Robert C. Martin.</li>
+</ul>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://tc2.dev/about/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">About</span>
+    </a>
+  
+
+  
+    <a class="pagination__item" href="https://tc2.dev/zero-carbon-human/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" ></a>
+    </a>
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/JosPolfliet"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://tc2.dev/svg/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/JosPolfliet"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://tc2.dev/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="Email"
+         href="mailto:info@tc2.dev"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://tc2.dev/svg/email.svg')"></div>
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+      <a class="social-icons__link" title="LinkedIn"
+         href="https://www.linkedin.com/in/jos-polfliet/"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://tc2.dev/svg/linkedin.svg')"></div>
+      </a>
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>

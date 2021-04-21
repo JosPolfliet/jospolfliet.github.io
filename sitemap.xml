@@ -17,6 +17,11 @@
   </url>
   
   <url>
+    <loc>https://tc2.dev/zero-to-one-ml-architecture/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tc2.dev/about/</loc>
   </url>
   
