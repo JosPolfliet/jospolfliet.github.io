@@ -131,11 +131,12 @@ if (!doNotTrack) {
 <p>If you would follow all best practices on the internet with regards to coding and technical architecture, start-ups would take multiple years and huge budgets to get an MVP, while you only have limited time, money and people. I created this list out of experience on what to focus on in which stage of building a new company, and which best practices you can safely ignore at different stages. Advice like this is always opinionated and you should pick and choose what actually applies to you or not. For example if you are working on a medical device, you should invest in security faster. Or if your customers need to be able to train their own models, you need to invest in training pipelines and serving architecture sooner.</p>
 <p>To create a mature product, let&rsquo;s say you need about one thousand development days. With 5 full time developers, that&rsquo;s about a year&rsquo;s work. If you are a start-up, you don&rsquo;t have that time (and maybe not even those developers) so you need to <strong>ruthlessly prioritize.</strong></p>
 <p>So, here is a summary of some thoughts and advice.</p>
+<p><em>Update October 2021:</em> For a similar checklist solely focused on security, I&rsquo;d recommend <a href="https://www.goldfiglabs.com/guide/saas-cto-security-checklist/">Goldfiglabs' Saas CTO Security Checklist</a></p>
 <h3 id="general-advice">General advice<a class="anchor" href="#general-advice">#</a></h3>
 <ul>
 <li>Learn, but then subsequently ignore &ldquo;best practices&rdquo; until you encounter the problem that would be solved. You do not need CI/CD, auto-scaling, Kubeflow training pipelines, prediction monitoring, automated retraining and multi-armed bandit A/B testing when you are working on your POC. Only solve the problems you actually have. Don&rsquo;t solve problems other people had and subsequently made a best practice, unless you have the same problem.</li>
 <li>Development speed matters. Do everything you can to optimize for development speed and make your own internal workflow as streamlined and fast as possible in the beginning. Most scalability, advanced security and code quality issues are perfectly fixable in the future. Make daily improvements to your internal workflow by automating things. I rather spend 2 hours automating something then doing the same 2-min task manually 10 times. That math doesn&rsquo;t seem to work out at first glance, but it does in the long run: automation compounds over time. That leads to exponential differences and fat moats.</li>
-<li>Write decoupled and easily extendable code. If all goes well, you will be working in this code base for the next 5 years, so try to structure it well from the beginning. You will - or should - never rewrite from scratch.</li>
+<li>Write decoupled and easily extendable code. If all goes well, you will be working in this code base for the next 5 years, so try to structure it well from the beginning. You will - or should - <em>Never</em> rewrite from scratch.</li>
 <li>Most decisions can easily be reverted and should be taken quickly. Except one type: adopting a new architecture/library/framework/database. When you choose to adopt Neo4j instead of Postgres, it&rsquo;s a choice that can take months of development work to properly integrate and fine tune. If that turned out to be the wrong choice, you are looking at a huge refactor, frustration and wasted time. Take extra care and time to think and test extensively before adopting new libraries, frameworks or technology. Don&rsquo;t rush these decisions, because they are very expensive to fix later. Make sure you check decisions like these with your technical advisors, if you are in doubt.</li>
 <li>Don&rsquo;t waste time. If you feel like you are losing time on something: fix it.</li>
 </ul>
@@ -227,6 +228,9 @@ You are building the foundation of your code base for the next ten years are so,
 <h2 id="read-more">Read more<a class="anchor" href="#read-more">#</a></h2>
 <ul>
 <li><a href="https://www.goodreads.com/book/show/18043011-clean-architecture">Clean Architecture</a> by Robert C. Martin.</li>
+<li><a href="https://www.goldfiglabs.com/guide/saas-cto-security-checklist/">Goldfiglabs' Saas CTO Security Checklist</a></li>
+<li>Another <a href="https://review.firstround.com/how-early-stage-startups-can-enlist-the-right-amount-of-security-as-they-grow">security roadmap</a> for growing teams</li>
+<li><a href="https://alexkrupp.typepad.com/sensemaking/2021/06/django-for-startup-founders-a-better-software-architecture-for-saas-startups-and-consumer-apps.html">18 rules for building successful products in Django</a></li>
 </ul>
 
 
