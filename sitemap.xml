@@ -1,48 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://tc2.dev/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/advice-learning-ml/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/zero-carbon-human/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/zero-to-one-ml-architecture/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/blog/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/tags/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/blog/readme/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tc2.dev/why/</loc>
   </url>
-  
 </urlset>
